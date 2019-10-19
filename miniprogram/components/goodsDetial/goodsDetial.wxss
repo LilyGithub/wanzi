@@ -1,0 +1,222 @@
+/* components/goodsDetial.wxss */
+@import '../../style/font.wxss';
+.goodsDetial-contain{
+  width:100%;
+  height:100%;
+  background:#fff;
+}
+.goodsDetail-scroll{
+  width:100%;
+  height:100%;
+}
+.goodsDetial-contain .goodsImgs{
+  width:100%;
+  height:600rpx;
+}
+.goodsDetial-contain .goodsImgs .items{
+  width:100%;
+  height:100%;
+}
+.goodsDetial-contain .goodsImgs image{
+  width:100%;
+  height:100%;
+}
+.doosDetial-names{
+  width:100%;
+  height:260rpx;
+  border-bottom:15rpx inset #EEE;
+  position: relative;
+}
+.doosDetial-names .name{
+  width:100%;
+  height:50%;
+  font-size:33rpx;
+  color:#000;
+  padding:20rpx;
+  padding-right:50rpx;
+  box-sizing: border-box;
+}
+.doosDetial-names .orgPrice{
+  width:100%;
+  height:20%;
+  font-size:30rpx;
+  color:#000;
+  padding:20rpx;
+  padding-right:50rpx;
+  box-sizing: border-box;
+}
+.doosDetial-names .price{
+  width:100%;
+  height:30%;
+  font-size:30rpx;
+  color:#000;
+  padding:20rpx;
+  padding-right:50rpx;
+  box-sizing: border-box;
+}
+.doosDetial-names .orgPrice .value{
+  font-size:26rpx;
+  color:#aaaaaa;
+  text-decoration:line-through;
+}
+.doosDetial-names .price .value{
+  font-size:39rpx;
+  color:#eb6b1d;
+}
+.goods-buWay{
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-width: 45rpx 45rpx 45rpx 45rpx;
+  border-style: solid;
+  bottom: 0;
+  right:0;
+}
+.goods-buWay.t1{
+  border-color: transparent #eb6b1d #eb6b1d transparent;
+}
+.goods-buWay.t2{
+  border-color: transparent #881304 #881304 transparent;
+}
+.goods-buWay.t3{
+  border-color: transparent #b95f62 #e4b0b2 transparent;
+}
+.goods-buWay.t1::after{
+  content:"淘宝";
+  transform:rotate(-45deg);
+  color:#fff;
+  font-size: 20rpx;
+  position: absolute;
+  width:50rpx;
+  height:50rpx;
+  top:-5rpx;
+  left:0rpx;
+}
+.goods-buWay.t2::after{
+  content:"天猫";
+  transform:rotate(-45deg);
+  color:#fff;
+  font-size: 20rpx;
+  position: absolute;
+  width:50rpx;
+  height:50rpx;
+  top:-5rpx;
+  left:0rpx;
+}
+.goods-buWay.t3::after{
+  content:"自营";
+  transform:rotate(-45deg);
+  color:#fff;
+  font-size: 20rpx;
+  position: absolute;
+  width:50rpx;
+  height:50rpx;
+  top:-5rpx;
+  left:0rpx;
+}
+.goodsDetial-buyWay-inst{
+  width:100%;
+  height:auto;
+  background: #f04628;
+  border: solid 15rpx #EEE;
+  border-top:none;
+  color:#FFF;
+  font-size:26rpx;
+  line-height:40rpx;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.goodsDetial-reason{
+  width:100%;
+  min-height:180rpx;
+  height:auto;
+  background: #FFF;
+  border-bottom: inset 15rpx #EEE;
+  color:#555;
+  font-size:26rpx;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.goodsDetial-reason>.title{
+  color:#000;
+  font-size:26rpx;
+}
+.goodsDetail-detail{
+  width:100%;
+  height:auto;
+}
+.goodsDetail-detail>.title{
+  width:100%;
+  height:80rpx;
+  text-align: center;
+  font-size: 29rpx;
+  color:#000;
+  padding:20rpx;
+  line-height:50rpx;
+  border-bottom:dotted 8rpx #eb6b1d;
+}
+.goodsDetail-detail>image{
+  width:100%;
+  height:2000rpx;
+}
+.goodsDetail-opbtn{
+  position: fixed;
+  bottom:0px;
+  width:100%;
+  height:170rpx;
+  border-top: solid 1rpx #eee;
+  background:#fff;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.goodsDetail-opbtn .copyKeyBtn{
+  width:40%;
+  height:100rpx;
+  line-height:100rpx;
+  font-size: 28rpx;
+  color:#fff;
+  background: linear-gradient(#d81e06, #ea671f);
+  text-align: center;
+}
+.goodsDetail-opbtn .copyKeyBtn.buyWay3{
+  text-decoration:line-through;
+  background: linear-gradient(#AAA, #EEE) !important;
+}
+.goodsDetail-opbtn .copyWxBtn{
+  width:40%;
+  height:100rpx;
+  line-height:100rpx;
+  font-size: 28rpx;
+  color:#fff;
+  background: linear-gradient(#ea671f, #fba408);
+  text-align: center;
+}
+.goodsDetail-opbtn .addLove{
+  width:20%;
+  height:100rpx;
+  line-height:100rpx;
+  font-size: 28rpx;
+  color:#000;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+.goodsDetail-opbtn .addLove .iconfont{
+  width:100%;
+  height:60%;
+  line-height:70rpx;
+  color:rgb(221, 142, 162);
+}
+.goodsDetail-opbtn .addLove .text{
+  width:100%;
+  height:30%;
+  font-size: 20rpx;
+  line-height:10rpx;
+}
+.bottom-block{
+  width:100%;
+  height:300rpx;
+}

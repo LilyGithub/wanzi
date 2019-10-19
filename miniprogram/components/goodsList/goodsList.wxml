@@ -1,0 +1,21 @@
+<!--components/goodsList/goodsList.wxml-->
+<scroll-view wx:if="{{showType!='column'}}" class="goodsList-content-row"
+    upper-threshold="500" lower-threshold="300" bindscrolltoupper="refreshFunc" bindscrolltolower="loadFunc" scroll-y="true">
+    <view class="goodsList-item" style="width:{{rowSize.goodsItemWidth}}px;height:{{rowSize.goodsItemHeight}}px" wx:key="{{index}}" wx:for="{{goodsList}}">
+      <goodsItem
+        showType="{{showType}}"
+        goodsInfo="{{item}}"
+        onClick="{{bindItemClick}}"
+      ></goodsItem>
+    </view>
+</scroll-view>
+<scroll-view wx:if="{{showType=='column'}}" class="goodsList-content-column"
+    upper-threshold="500" lower-threshold="300" bindscrolltoupper="refreshFunc" bindscrolltolower="loadFunc" scroll-y="true">
+    <view class="goodsList-item" wx:key="{{index}}" wx:for="{{goodsList}}">
+      <goodsItem
+        showType="{{showType}}"
+        goodsInfo="{{item}}"
+        onClick="{{bindItemClick}}"
+      ></goodsItem>
+    </view>
+</scroll-view>

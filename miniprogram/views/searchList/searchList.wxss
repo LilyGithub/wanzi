@@ -1,0 +1,87 @@
+/* miniprogram/views/searchList/searchList.wxss */
+page{
+  width:100%;
+  height:100%;
+}
+.searchList-page{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  background:#fff;
+}
+view{
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.searchList-top{
+  position:fixed;
+  width:100%;
+  height:230rpx;
+  top:0;
+  left:0;
+  z-index:2;
+  background: linear-gradient(rgba(238,126,130,1), rgba(255,170,199,0.8));
+  padding-bottom:33rpx;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.searchList-top .input{
+  display:flex;
+  width:80%;
+  height:70rpx;
+  background:#ffffff;
+  border-radius: 25px;
+  justify-content: center;
+  position: relative;
+}
+.searchList-top .input input{
+  display:block;
+  width:100%;
+  height:100%;
+  padding-left:70rpx;
+  padding-right:70rpx;
+  line-height:70rpx;
+  color:rgb(247, 113, 118);
+}
+.searchList-top .input .iconsearch{
+  position:absolute;
+  font-size:50rpx;
+  height:70rpx;
+  line-height:70rpx;
+  left:10rpx;
+  color:rgb(238,126,130);
+  z-index: 1;
+}
+.searchList-content{
+  height:100%;
+  width:100%;
+  padding-top:300rpx;
+  background:#fff;
+}
+.nodata-tips{
+  width:100%;
+  position: absolute;
+  top:0;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background:#fff;
+}
+.nodata-tips image{
+  width:30px;
+  height:30px;
+}
+.nodata-tips .text{
+  height:100rpx;
+  width:100%;
+  line-height:100rpx;
+  font-size:28rpx;
+  color:#aaa;
+  text-align: center;
+}

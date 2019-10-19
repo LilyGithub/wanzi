@@ -1,0 +1,149 @@
+/* miniprogram/views/uploadGoods/uploadGoods.wxss */
+goods-up-main{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+}
+.width60{
+  width:60% !important;
+}
+.upload-goods-contian{
+  width:100%;
+  height:100%;
+  box-sizing: border-box;
+  background:#ffffff;
+  overflow: hidden;
+}
+.upload-goods-contian .firstItem{
+  margin-top:200rpx;
+  border-top:none !important;
+}
+view{
+  box-sizing: border-box;
+}
+.upload-goods-contian .input-item{
+  width:100%;
+  height:110rpx;
+  border-top:solid 8rpx #fff0f5;
+  background:#fff;
+  display:felx;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding:10rpx;
+  padding-left:20rpx;
+  position: relative;
+}
+.upload-goods-contian .input-item .checkbox{
+  display:block;
+  float:left;
+  width:300rpx;
+  height:80rpx;
+  line-height:80rpx;
+}
+.upload-goods-contian .input-item text{
+  font-size:33rpx;
+  line-height:90rpx;
+}
+.upload-goods-contian .input-item input{
+  width:100%;
+  height:100%;
+}
+.upload-goods-contian .input-item.middle{
+  width:100%;
+  height:180rpx;
+}
+.upload-goods-contian .input-item.upimg{
+  width:100%;
+  height:800rpx;
+  padding-top:100rpx;
+  position: relative;
+}
+.upload-goods-contian .input-item.upimg.maxs{
+  width:100%;
+  height:1500rpx;
+}
+
+.upload-goods-contian .input-item.max{
+  width:100%;
+  height:300rpx;
+}
+.upload-goods-contian .input-item.maxMax{
+  width:100%;
+  height:900rpx;
+}
+.upload-goods-contian .input-item textarea{
+  width:100%;
+  height:100%;
+}
+.upload-goods-contian .input-item .picker{
+  line-height:90rpx;
+}
+.upload-goods-contian .input-item .picker .iconfont{
+  position: absolute;
+  right: 100rpx;
+}
+.upload-goods-contian .input-item .mainimgs, .upload-goods-contian .input-item.upimg .iconfont{
+  width:200rpx;
+  height:200rpx;
+  margin-left:30rpx;
+  margin-right:30rpx;
+  margin-top:20rpx;
+  border:solid 1px #ffc5d9;
+}
+.upload-goods-contian .input-item.upimg .iconfont{
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  font-size: 60rpx;
+  line-height:100rpx;
+  color:#ffaac7;
+  border:solid 1px #ffc5d9;
+}
+.upload-goods-contian .input-item.upimg .title{
+  position:absolute;
+  width:100%;
+  top:0;
+  left:0;
+  text-align: center;
+  height:80rpx;
+  line-height:80rpx;
+  font-size:30rpx;
+  color:#ffc5d9;
+}
+.upload-goods-bottom-opt{
+  position: fixed;
+  width:100%;
+  height:170rpx;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  border-top:solid 1rpx #ffc5d9;
+  color:#fff;
+  background:#FFF;
+  bottom:0;
+  z-index:99;
+}
+.upload-goods-bottom-opt .preview{
+  width:40%;
+  height:90rpx;
+  line-height:90rpx;
+  text-align: center;
+  background:linear-gradient(#f5232a, #d64273);
+}
+.upload-goods-bottom-opt .upload{
+  width:40%;
+  height:90rpx;
+  line-height:90rpx;
+  text-align: center;
+   background:linear-gradient(#ee7e82, #ffaac7);
+}
+.upload-goods-preview{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index: 10;
+}

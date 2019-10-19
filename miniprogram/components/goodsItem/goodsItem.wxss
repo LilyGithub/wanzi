@@ -1,0 +1,211 @@
+.goods-item{
+  width:100%;
+  height:230rpx;
+  padding:10px;
+  margin-top:10rpx;
+  display:flex;
+  flex-direction: row;
+  border-bottom:solid 2px #EEEEEE;
+  box-sizing: border-box;
+  position: relative;
+}
+.goods-item .item-left-img{
+  width:190rpx;
+  height:190rpx;
+}
+.goods-item .item-right-content{
+  width:65%;
+  height:100%;
+  padding-left:10px;
+  position: relative;
+}
+.goods-item .item-right-content .title{
+  width:100%;
+  height:110rpx;
+}
+.goods-item .item-right-content .title image{
+  width:50px;
+  height:12px;
+  position: relative;
+  top:3px;
+}
+.goods-item .item-right-content .title text{
+  font-size:26rpx;
+  color:#000000;
+}
+.goods-item .item-right-content .orgprice{
+  font-size:24rpx;
+  color:#aaaaaa;
+  text-decoration:line-through;
+}
+.goods-item .item-right-content .price{
+  color:#ec8a8a;
+}
+.goods-item .item-right-content .tips{
+  width:120rpx;
+  text-align: center;
+  font-size:23rpx;
+  color:#ea671f;
+  border:solid 1px #ea671f;
+  position: absolute;
+  right:20rpx;
+  bottom:5rpx;
+  border-radius: 10rpx;
+}
+.goods-item .item-buWay{
+  position: absolute;
+  top: 0;
+  right:0;
+  width: 0px;
+  height: 0px;
+  border-width: 45rpx 45rpx 45rpx 45rpx;
+  border-style: solid;  
+}
+.goods-item .item-buWay.t1{
+  border-color:#eb6b1d #eb6b1d transparent transparent;
+}
+.goods-item .item-buWay.t1::after{
+  content:"淘宝";
+  transform:rotate(45deg);
+  color:#fff;
+  font-size: 20rpx;
+  position: absolute;
+  width:50rpx;
+  height:50rpx;
+  top:-30rpx;
+  left:-10rpx;
+}
+.goods-item .item-buWay.t2{
+  border-color:#881304 #881304 transparent transparent;
+}
+.goods-item .item-buWay.t2::after{
+  content:"天猫";
+  transform:rotate(45deg);
+  color:#fff;
+  font-size: 20rpx;
+  position: absolute;
+  width:50rpx;
+  height:50rpx;
+  top:-30rpx;
+  left:-10rpx;
+}
+.goods-item .item-buWay.t3{
+  border-color:#b95f62 #e4b0b2 transparent transparent;
+}
+.goods-item .item-buWay.t3::after{
+  content:"自营";
+  transform:rotate(45deg);
+  color:#fff;
+  font-size: 20rpx;
+  position: absolute;
+  width:50rpx;
+  height:50rpx;
+  top:-30rpx;
+  left:-10rpx;
+}
+/**************************  row ******************************************/
+.goods-item-row{
+  width:100%;
+  height:100%;
+  padding:15rpx;
+  display:flex;
+  flex-direction: column;
+  border:solid 1rpx rgb(252, 233, 233);
+  box-sizing: border-box;
+  position: relative;
+}
+.goods-item-row .item-left-img{
+  width:100%;
+  height:66%;
+}
+.goods-item-row .item-right-content{
+  width:100%;
+  height:33%;
+  position: relative;
+}
+.goods-item-row .item-right-content .title{
+  width:100%;
+  height:60%;
+  font-size:26rpx;
+  color:#000000;
+  line-height:39rpx;
+  padding:3rpx;
+}
+.goods-item-row .item-right-content .content{
+  width:100%;
+  height:40%;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.goods-item-row .item-right-content .price{
+  color:#ec8a8a;
+}
+.goods-item-row .item-right-content .orgprice{
+  font-size:24rpx;
+  color:#aaaaaa;
+  text-decoration:line-through;
+}
+.goods-item-row .item-right-content .tips{
+  width:120rpx;
+  text-align: center;
+  font-size:23rpx;
+  color:#ea671f;
+  border:solid 1px #ea671f;
+  position: absolute;
+  right:20rpx;
+  bottom:15rpx;
+  border-radius: 10rpx;
+}
+.goods-item-row .item-buWay{
+  position: absolute;
+  top: 0;
+  right:0;
+  width: 0px;
+  height: 0px;
+  border-width: 45rpx 45rpx 45rpx 45rpx;
+  border-style: solid;  
+}
+.goods-item-row .item-buWay.t1{
+  border-color:#eb6b1d #eb6b1d transparent transparent;
+}
+.goods-item-row .item-buWay.t1::after{
+  content:"淘宝";
+  transform:rotate(45deg);
+  color:#fff;
+  font-size: 20rpx;
+  position: absolute;
+  width:50rpx;
+  height:50rpx;
+  top:-30rpx;
+  left:-10rpx;
+}
+.goods-item-row .item-buWay.t2{
+  border-color:#881304 #881304 transparent transparent;
+}
+.goods-item-row .item-buWay.t2::after{
+  content:"天猫";
+  transform:rotate(45deg);
+  color:#fff;
+  font-size: 20rpx;
+  position: absolute;
+  width:50rpx;
+  height:50rpx;
+  top:-30rpx;
+  left:-10rpx;
+}
+.goods-item-row .item-buWay.t3{
+  border-color:#b95f62 #e4b0b2 transparent transparent;
+}
+.goods-item-row .item-buWay.t3::after{
+  content:"自营";
+  transform:rotate(45deg);
+  color:#fff;
+  font-size: 20rpx;
+  position: absolute;
+  width:50rpx;
+  height:50rpx;
+  top:-30rpx;
+  left:-10rpx;
+}

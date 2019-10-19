@@ -1,0 +1,26 @@
+/* components/goodsList/goodsList.wxss */
+view,scroll-view{
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.goodsList-content-row{
+  width:100%;
+  height:100%;
+  background:#fff;
+}
+.goodsList-content-row .goodsList-item{
+  width:47%;
+  margin-right:2px;
+  margin-left:2px;
+  float:left;
+  overflow: hidden;
+}
+
+/********************************* colum ***********************/
+.goodsList-content-column{
+  width:100%;
+  height:100%;
+  background:#fff;
+  padding:30rpx;
+  padding-top:230rpx;
+}

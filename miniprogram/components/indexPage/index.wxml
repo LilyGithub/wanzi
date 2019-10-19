@@ -1,0 +1,37 @@
+<view class="index-container">
+ <!-- <button style="width:100px;height:100px;" open-type="getUserInfo" bindgetuserinfo="getUserInfo">kjk</button>
+  -->
+  <view class="index-top">
+    <view class="index-title">丸子的小店</view>
+    <view class="input" bindtap="gotoSearchPage">
+      <text class="iconfont iconsearch"></text>
+      <text class="searchtext">搜索淘宝/天猫商品 领券拿最低价</text>
+      <!-- <input type="text"></input> -->
+    </view>
+  </view>
+  <scroll-view upper-threshold="500" lower-threshold="300" bindscrolltoupper="refreshList" bindscrolltolower="loadNextList" scroll-y="true" class="index-sroll-content">
+    <view class="index-class-table">
+      <view  wx:for="{{goodsTypeList}}" id="{{item.code}}" wx:key="{{index}}" class="goodstypeitem" bindtap="gotoSortPage">
+        <image class="class-icon" src="../../images/icon/goodstype/{{item.img}}.png" ></image>
+        <view class="class-text">{{item.name}}</view>
+      </view>
+    </view>
+    <view class="index-pop-goods-list">
+      <image class="top-title" style="height:{{tile2Height}}px" src="../../images/jingrishangxing.png"></image>
+      <goodsItem 
+        showType="column"
+        wx:for="{{popGoodsList}}"  
+        wx:key="{{index}}" 
+        goodsInfo="{{item}}"
+        onClick="{{goodsItemClick}}"
+      >
+      </goodsItem>
+    </view>
+    <view class="bottom-block"></view>
+  </scroll-view>
+  
+  <view wx:if="{{showDetail}}" style="width:100%;height:100%;position:absolute;top:0;left:0;z-index:99">
+    <goodsDetial closeFun="{{closeGoodsDetail}}" goodsInfo="{{showGoods}}"></goodsDetial>
+  </view>
+  
+</view>

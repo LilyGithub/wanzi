@@ -1,0 +1,29 @@
+<!--miniprogram/views/searchList/searchList.wxml-->
+<view class="searchList-page">
+  <view class="iconfont iconyoujiantou return" bindtap="returnPre"></view>
+
+  <view class="searchList-top">
+    <view class="input">
+      <text class="iconfont iconsearch"></text>
+      <input auto-focus placeholder="搜索您要的商品" bindinput="inputkeyWord" 
+        bindconfirm="queryGoodsByKeyWord" bindfocus="startInputKeyWord" ></input>
+      <!-- <input type="text"></input> -->
+    </view>
+    <view></view>
+  </view>
+
+  <view class="searchList-content">
+    <goodsList 
+      showType="row"
+      goodsList="{{goodsList}}"
+      itemClick="{{itemClick}}"
+      loadFunc="{{loadFunc}}"
+    />
+  </view>
+
+  <view wx:if="{{noData}}" class="nodata-tips">
+   <image src="../../images/error.png"></image>
+   <view class="text">小主很抱歉，没找到符合的货品</view>
+  </view>
+  
+</view>

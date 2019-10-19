@@ -1,0 +1,44 @@
+<!--components/goodsDetial.wxml-->
+<view class="goodsDetial-contain">
+  <view class="iconfont iconyoujiantou return" bindtap="closeFun"></view>
+  <scroll-view scroll-y="true" class="goodsDetail-scroll">
+    <swiper class="goodsImgs" indicator-dots="true">
+      <swiper-item wx:for="{{goodsInfo.imgs}}" wx:key="{{index}}" class="items">
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </swiper>
+    <view class="doosDetial-names">
+      <view class="goods-buWay t{{goodsInfo.buyWay}}"></view>
+      <view class="name">{{goodsInfo.name}}</view>
+      <view class="orgPrice">原价：<text class="value">￥{{goodsInfo.orgPrice}}</text></view>
+      <view class="price">劵后价：<text class="value">￥{{goodsInfo.price}}</text></view>
+    </view>
+    <view class="goodsDetial-buyWay-inst">
+      <text class="title">购买方式：</text>
+      {{goodsInfo.buyWay==3?"➣点击右下角微信咨询  ➣返回微信添加微信购买":"➣点击右下角领券  ➣打开淘宝app  ➣领券购买"}}
+    </view>
+    <view class="goodsDetial-reason">
+      <text class="title">推荐理由：</text>
+      {{goodsInfo.content.reason}}
+    </view>
+    <view wx:if="{{userInfo.adminLevel > 0}}" class="goodsDetial-buyWay-inst" bindtap="copyBuyBz" >
+      <text class="title">下单备注(管理员可见)：</text>
+      {{goodsInfo.buyKey}}
+    </view>
+    <view class="goodsDetail-detail">
+      <view class="title">商品详情</view>
+      <image wx:key="{{index}}" wx:for="{{goodsInfo.content.detail}}" src="{{item}}" style="height:{{detailHeight[index]}}px"></image>
+    </view>
+    <view class="bottom-block">
+     
+    </view>
+  </scroll-view>
+  <view class="goodsDetail-opbtn">
+    <view class="addLove" bindtap="addLove">
+      <view class="iconfont {{isLove?'iconshoucang':'iconshoucang1'}}"></view>
+      <view class="text">收藏</view>
+    </view>
+    <view class="copyWxBtn" bindtap="copyBuyWx">加微信咨询</view>
+    <view class="copyKeyBtn buyWay{{goodsInfo.buyWay}}" bindtap="copyBuyKey">领券</view>
+  </view>
+</view>

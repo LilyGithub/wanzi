@@ -1,0 +1,9 @@
+<view class="index-container">
+  <index wx:if="{{activeMenu=='index'}}"></index>
+  <me userInfo="{{userInfo}}" wzUserInfo="{{wzUserInfo}}" wx:if="{{activeMenu=='me'}}"></me>
+  
+  <navigationBar 
+    getUserInfoBack="{{getUserInfoBack}}"
+    menuChange="{{menuChange}}"
+  />
+</view>

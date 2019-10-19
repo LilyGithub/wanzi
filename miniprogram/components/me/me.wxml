@@ -1,0 +1,16 @@
+<!--components/me/me.wxml-->
+<view class="me-cantain">
+  <view class="me-user-info">
+    <image class="user-image" src="{{userInfo.avatarUrl}}"></image>
+    <view class="user-detial">
+      <view class="nick-name">{{userInfo.nickName}}</view>
+      <view class="others">
+        <image src="../../images/me/level{{wzUserInfo.vip}}.jpg" class="levelicon"></image>
+        <view class="text level{{wzUserInfo.vip}}"></view>
+      </view>
+    </view>
+  </view>
+  <view class="me-list-item"><image class="i-icon" src="../../images/me/loveFld.png"></image><text>收藏</text></view>
+  <view wx:if="{{showUpGoods}}" bindtap="gotoUploadGoods" class="me-list-item"><image class="i-icon" src="../../images/me/upload.png"></image><text>上架商品</text></view>
+  <view wx:if="{{showUsers}}" class="me-list-item"><image class="i-icon" src="../../images/me/users.png"></image><text>用户管理</text></view>
+</view>

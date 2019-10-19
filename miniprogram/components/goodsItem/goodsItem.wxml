@@ -1,0 +1,30 @@
+<view wx:if="{{showType=='column'}}" class="goods-item" bindtap="itemClick">
+  <view class="item-buWay t{{goodsInfo.buyWay}}"></view>
+  <image src="{{goodsInfo.mainImg}}" class="item-left-img"></image>
+  <view class="item-right-content">
+    <view class="title">
+      <text>{{goodsInfo.name}}</text>
+    </view>
+    <view class="orgprice">￥{{goodsInfo.orgPrice}}
+    </view>
+    <view class="price">￥{{goodsInfo.price}}
+    </view>
+    <view class="tips">领优惠购买</view>
+  </view>
+</view>
+<view wx:if="{{showType!='column'}}" class="goods-item-row" bindtap="itemClick">
+  <view class="item-buWay t{{goodsInfo.buyWay}}"></view>
+  <image src="{{goodsInfo.mainImg}}" class="item-left-img"></image>
+  <view class="item-right-content">
+    <view class="title">
+      {{goodsInfo.name}}
+    </view>
+    <view class="content">
+      <view class="orgprice">￥{{goodsInfo.orgPrice}}
+      </view>
+      <view class="price">￥{{goodsInfo.price}}
+      </view>
+    </view>
+    <view class="tips">领优惠购买</view>
+  </view>
+</view>

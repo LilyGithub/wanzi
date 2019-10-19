@@ -1,0 +1,21 @@
+<!--miniprogram/views/sortPage/sortPage.wxml-->
+<view class="sort-content">
+  <view class="iconfont iconyoujiantou return" bindtap="returnPre"></view>
+
+  <scroll-view class="lefts" scroll-y="true" style="height:{{contentHeight}}px">
+    <view class="item {{currentType==index?'selected':''}}" id="{{index}}" wx:for="{{typeList}}" wx:key="{{index}}" bindtap="selectTypeList">{{item.name}}</view>
+  </scroll-view>
+
+  <scroll-view class="rights" scroll-y="true" style="height:{{contentHeight}}px">
+    <view class="item" id="{{item.code}}" wx:for="{{typeList[currentType].subClass}}" wx:key="{{index}}"
+       bindtap="gotoSearchPage">
+      <image src="../../images/icon/goodsSubType/{{item.img}}.jpg"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </scroll-view>
+
+  <view class="sort-tops">商品分类</view>
+  <!-- <view class="sort-bottoms">
+    <navigationBar />
+  </view> -->
+</view>

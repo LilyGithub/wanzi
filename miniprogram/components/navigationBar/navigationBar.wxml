@@ -1,0 +1,10 @@
+<!--components/navigationBar/navigationBar.wxml-->
+<view class="index-bottom-oprs"> 
+  <view class="menu {{activeMenu=='index'?'selected':''}}" id="index" bindtap="gotoPage">
+    <view class="iconfont icondianpu1"></view><view class="text">店铺</view>
+  </view>
+  <button class="menu {{activeMenu=='me'?'selected':''}}" id="me" hover-class="none"
+          open-type="getUserInfo" bindtap="gotoPage" bindgetuserinfo="getUserInfo">
+    <view class="iconfont iconwo"></view><view class="text">我</view>
+  </button>
+</view>

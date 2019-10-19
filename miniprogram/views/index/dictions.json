@@ -1,0 +1,68 @@
+{
+  name: "女装",
+    code: 1,
+      img: "iconnvzhuang",
+        component: ""
+},
+{
+  name: "男友",
+    code: 2,
+      img: "iconnanyou",
+        component: ""
+},
+{
+  name: "内衣",
+    code: 3,
+      img: "iconneiyi",
+        component: ""
+}, {
+  name: "美妆",
+    code: 4,
+      img: "iconmeizhuang",
+        component: ""
+}, {
+  name: "配饰",
+    code: 5,
+      img: "iconpeishi",
+        component: ""
+}, {
+  name: "鞋品",
+    code: 6,
+      img: "iconxie",
+        component: ""
+}, {
+  name: "箱包",
+    code: 7,
+      img: "iconbaobao",
+        component: ""
+}, {
+  name: "儿童",
+    code: 8,
+      img: "",
+        component: "iconertong"
+}, {
+  name: "母婴",
+    code: 9,
+      img: "",
+        component: "iconmuying"
+}, {
+  name: "居家",
+    code: 10,
+      img: "iconjiaju",
+        component: ""
+}, {
+  name: "美食",
+    code: 11,
+      img: "iconshiping",
+        component: ""
+}, {
+  name: "数码",
+    code: 12,
+      img: "",
+        component: ""
+}, {
+  name: "家电",
+    code: 13,
+      img: "",
+        component: ""
+}

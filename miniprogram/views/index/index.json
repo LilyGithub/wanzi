@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "index": "/components/indexPage/index",
+    "navigationBar": "/components/navigationBar/navigationBar",
+    "me": "/components/me/me"
+  }
+}

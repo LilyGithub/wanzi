@@ -1,0 +1,77 @@
+<!--miniprogram/views/uploadGoods/uploadGoods.wxml-->
+
+<view class="goods-up-main" >
+  <scroll-view scroll-y="true" wx:if="{{!showPreview}}" class="upload-goods-contian">
+    <view class="iconfont iconyoujiantou return" bindtap="returnPre"></view>
+    <view class="input-item firstItem middle">
+      <textarea auto-focus value="{{goodsData.name}}" bindinput="inputName" placeholder="商品名称"></textarea>
+    </view>
+    <view class="input-item">
+      <textarea value="{{goodsData.buyKey}}" placeholder="购买口令，或下单备注" bindinput="inputBuyKey"></textarea>
+    </view>
+    <view class="input-item">
+      <textarea value="{{goodsData.wx}}" placeholder="微信号" bindinput="inputWxh"></textarea>
+    </view>
+    <view class="input-item maxMax">
+      <textarea class="width60" value="{{goodsData.content.reason}}" maxlength="500" placeholder="推荐理由" 
+              bindinput="inputReason"></textarea>
+    </view>
+    <view class="input-item">
+      <picker bindchange="bindGoodsTypePickerChange" value="{{index}}" range-key="name" range="{{mainTypes}}">
+        <view class="picker">
+          主类型：{{mainTypes[goodsData.mainType].name}}<text class="iconfont iconzuojiantou"></text>
+        </view>
+      </picker>
+    </view>
+    <view class="input-item maxMax">
+      <!-- <picker bindchange="bindGoodsSubTypePickerChange" value="{{index}}" range-key="name" range="{{subTypes}}">
+        <view class="picker">
+          子类型：{{subTypes[goodsData.subType].name}}<text class="iconfont iconzuojiantou"></text>
+        </view>
+      </picker> -->
+      <checkbox-group bindchange="bindGoodsSubTypePickerChange">
+        <label class="checkbox" wx:key="{{item.code}}" wx:for="{{subTypes}}">
+          <checkbox value="{{item.code}}" checked="{{subTypeCheckStatus[item.code]}}"/>{{item.name}}
+        </label>
+      </checkbox-group>
+    </view>
+    <view class="input-item">
+      <picker bindchange="bindBuyWayPickerChange" value="{{index}}" range="{{buyWayTypes}}">
+        <view class="picker">
+          购买途径：{{buyWayTypes[goodsData.buyWay-1]}}<text class="iconfont iconzuojiantou"></text>
+        </view>
+      </picker>
+    </view>
+    <view class="input-item">
+      <input type="digit" value="{{goodsData.orgPrice}}" placeholder="原价" bindinput="inputOrgPrice"></input>
+    </view>
+    <view class="input-item">
+      <input type="digit" value="{{goodsData.price}}" placeholder="现价" bindinput="inputPrice"></input>
+    </view>
+    <!-- 上传主图片 -->
+    <view class="input-item upimg">
+      <view class="title">主图片(用于首页，及轮播展示）5张内</view>
+      <image class="mainimgs" src="{{item}}" id="{{index}}" wx:key="{{index}}" wx:for="{{mainImages}}"  bindtap="mainImgClick"></image>
+      <view class="uploader-text" class="iconfont iconshangchuantupian" bindtap="doUploadMainImages">
+      </view>
+    </view>
+    <!-- 上传详情图片 -->
+    <view class="input-item upimg maxs">
+      <view class="title">详情图片（限10张图）</view>
+      <image class="mainimgs" src="{{item}}" id="{{index}}" wx:key="{{index}}" wx:for="{{detailImage}}" bindtap="detialImgClick"></image>
+      <view class="iconfont iconshangchuantupian" bindtap="doUploadDetialImages">
+      </view>
+    </view>
+
+    <view class="input-item max">
+    </view>
+    
+    <view class="upload-goods-bottom-opt">
+      <view class="preview" bindtap="previewGoods">预览</view>
+      <view class="upload" bindtap="uploadGoods">上传</view>
+    </view>
+  </scroll-view>
+  <view wx:if="{{showPreview}}" class="upload-goods-preview">
+      <goodsDetial  goodsInfo="{{goodsData}}" closeFun="{{colosePreviewGoods}}"></goodsDetial>
+  </view>
+</view>

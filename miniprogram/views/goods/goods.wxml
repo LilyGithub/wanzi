@@ -1,0 +1,2 @@
+<!--miniprogram/views/goods/goods.wxml-->
+<goodsDetial wx:if="{{goodsInfo!=null}}" closeFun="{{closeGoodsDetail}}" goodsInfo="{{goodsInfo}}"></goodsDetial>

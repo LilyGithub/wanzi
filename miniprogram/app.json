@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "views/index/index",
+    "views/login/login",
+    "views/uploadGoods/uploadGoods",
+    "views/searchList/searchList",
+    "views/goods/goods",
+    "views/sortPage/sortPage",
+    "views/loveGoods/loveGoods"
+  ],
+  "window": {
+    "backgroundColor": "#fff0f5",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff0f5",
+    "navigationBarTitleText": "丸子的小店",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}
